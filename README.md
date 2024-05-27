@@ -27,33 +27,7 @@ Independente do sistema operacional que esteja , verifique se possui Microsoft V
 ### 🔩 Analise os testes de ponta a ponta
 
 ```
-Teste de Inserção de Dados no Banco de Dados:
-Cenário: Um novo registro de jogador é inserido no banco de dados.
-Verificação: Confirma se os dados do novo jogador são corretamente armazenados no banco de dados.
-
-Teste de Edição de Dados no Banco de Dados:
-Cenário: Um jogador existente atualiza suas informações no banco de dados.
-Verificação: Garante que as informações do jogador são corretamente atualizadas no banco de dados sem perda de dados.
-
-Teste de Exclusão de Dados do Banco de Dados:
-Cenário: Um jogador existente é excluído do banco de dados.
-Verificação: Confirma se o registro do jogador é corretamente removido do banco de dados sem causar problemas de integridade.
-
-Teste de Autenticação de Usuário:
-Cenário: Um usuário tenta fazer login no sistema com credenciais válidas.
-Verificação: Verifica se o sistema permite o acesso do usuário apenas com credenciais válidas.
-
-Teste de Validação de Entrada de Dados:
-Cenário: Um usuário tenta inserir dados inválidos em um formulário.
-Verificação: Garante que o sistema valide corretamente os dados inseridos pelos usuários e forneça feedback apropriado em caso de erro.
-
-Teste de Recuperação de Dados do Banco de Dados:
-Cenário: Um jogador solicita seus dados armazenados no banco de dados.
-Verificação: Confirma se o sistema recupera corretamente os dados do jogador do banco de dados e os apresenta ao usuário.
-
-Teste de Resiliência do Servidor:
-Cenário: O servidor é reiniciado durante uma partida em andamento.
-Verificação: Verifica se o jogo é capaz de lidar com reinicializações do servidor sem perda de dados ou interrupção significativa para os jogadores.
+Testando apenas algumas funcionalidades, conhecimento e lógica.
 
 ```
 
