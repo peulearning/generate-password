@@ -3,61 +3,45 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 const useStorage = () => {
 
   const getItem = async (key) => {
-    try{
+    try {
       const password = await AsyncStorage.getItem(key);
-      return JSON.parse(password)  || [];
-    }
-    catch(error){
-      console.log("Erro ao buscar", error)
+      return JSON.parse(password) || [];
+    } catch (error) {
+      console.log("Erro ao buscar", error);
       return [];
     }
   }
 
-
-
   const saveItem = async (key, value) => {
-    try{
+    try {
       let passwords = await getItem(key);
-
-      passwords.push(value)
-
-      await AsyncStorage.setItem(key,JSON.stringify(passwords))
-
-
-    }
-    catch(error){
-      console.log("Erro ao SALVAR", error)
-
+      passwords.push(value);
+      await AsyncStorage.setItem(key, JSON.stringify(passwords));
+    } catch (error) {
+      console.log("Erro ao SALVAR", error);
     }
   }
 
-
-  const removeItem = async () => {
-    try{
+  const removeItem = async (key, item) => { // Adicionando parâmetros key e item
+    try {
       let passwords = await getItem(key);
 
-      let myPasswords =  passwords.filter ((password) => {
-        return (password !== item)
-      })
+      let myPasswords = passwords.filter((password) => {
+        return password !== item;
+      });
 
-      await AsyncStorage.setItem(key, JSON.stringify(myPasswords))
+      await AsyncStorage.setItem(key, JSON.stringify(myPasswords));
       return myPasswords;
-
-
-    } catch(error){
-      console.log("ERRO ao Deletar", error)
+    } catch (error) {
+      console.log("ERRO ao Deletar", error);
     }
   }
-
 
   return {
     getItem,
     saveItem,
     removeItem,
   }
-
-
 }
-
 
 export default useStorage;
